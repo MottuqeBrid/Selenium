@@ -1,9 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-browser = webdriver.Firefox()
-browser.get("https://selenium.dev")
-browser.maximize_window()
-title = browser.title
+
+driver = webdriver.Firefox()
+driver.get("https://selenium.dev")
+driver.maximize_window()
+title = driver.title
 print(title)
 
-assert  "Selenium" in title
+assert "Selenium" in title
+
+driver.find_element(By.XPATH("#APjFqb"))
